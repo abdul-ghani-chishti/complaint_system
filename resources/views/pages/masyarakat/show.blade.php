@@ -8,7 +8,7 @@
     <main class="h-full pb-16 overflow-y-auto">
         <div class="container grid px-6 mx-auto">
             <h2 class="my-6 text-2xl font-semibold text-center text-gray-700 dark:text-gray-200">
-                Detail Pengaduan
+                Complaint Detail
             </h2>
 
 
@@ -48,7 +48,7 @@
                                 <img class=" h-32 w-35 " src="{{ Storage::url($item->image) }}" alt="" loading="lazy"/>
                             </div>
                             <div class="text-center flex-1 dark:text-gray-400">
-                                <h1 class="mb-8 font-semibold">Keterangan</h1>
+                                <h1 class="mb-8 font-semibold">Complaint</h1>
                                 <p class="text-gray-800 dark:text-gray-400">
                                     {{ $item->description}}
                                 </p>
@@ -59,7 +59,7 @@
                         class="px-4 py-3 mb-2 flex bg-white rounded-lg shadow-md dark:text-gray-400   dark:bg-gray-800">
 
                         <div class="text-center flex-1">
-                            <h1 class="mb-8 font-semibold">Tanggapan</h1>
+                            <h1 class="mb-8 font-semibold">Responses</h1>
                                 @foreach($tangap as $t)
                                 <p class="text-gray-800 dark:text-gray-400">
                                     {{$t->tanggapan}}

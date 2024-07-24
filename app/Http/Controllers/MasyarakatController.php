@@ -22,9 +22,7 @@ class MasyarakatController extends Controller
      */
     public function index()
     {
-//        dd(5);
         $user = Auth::user()->nik;
-        // dd($user);
 
         return view('pages.masyarakat.index', ['liat' => $user]);
     }
@@ -36,7 +34,6 @@ class MasyarakatController extends Controller
      */
     public function create()
     {
-        dd(4);
         return view('pages.masyarakat.index');
     }
 
@@ -48,7 +45,7 @@ class MasyarakatController extends Controller
      */
     public function store(Request $request)
     {
-//        dd(3);
+
         $request->validate([
             'description' => 'required',
             'image' => 'required',
@@ -83,7 +80,7 @@ class MasyarakatController extends Controller
 
 
         $user = Auth::user()->pengaduan()->orderBy('created_at', 'DESC')->get();
-//        dd(2,Auth::user(),$user);
+
         return view('pages.masyarakat.detail', [
             'items' => $user
         ]);
@@ -98,7 +95,7 @@ class MasyarakatController extends Controller
         ])->findOrFail($id);
 
         $tangap = Tanggapan::where('pengaduan_id', $id)->select('tanggapan')->get();
-//        dd($tangap->toArray());
+
         return view('pages.masyarakat.show', [
             'item' => $item,
             'tangap' => $tangap
