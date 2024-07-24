@@ -1,5 +1,5 @@
-# LAPORSA - Website Pengaduan Masyarakat
-LAPORSA Website Source Code - Online Public Complaints Service created using the Laravel 8 Framework and Tailwindcss. This website already contains CRUD with a database using MySQL.
+# Complaint Management System
+Online Public Complaints Service created using the Laravel 8 Framework and Tailwindcss. This website already contains CRUD with a database using MySQL.
 
 ## Tools
 1. PHP Language
